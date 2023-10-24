@@ -1,0 +1,14 @@
+<p>formation AddForm</p>
+
+<fieldset>
+    <legend>Enregistrement</legend>
+    <p>name: <input type="text" placeholder="name" [(ngModel)]="name"></p>
+    <p>description: <input type="text" placeholder="description" [(ngModel)]="description"></p>
+    <p>dateDebut: <input type="date" placeholder="date" [(ngModel)]="dateDebut"></p>
+    <p>duree: <input type="date" placeholder="duree" [(ngModel)]="duree"></p>
+    <p>preRequis: <input type="text" placeholder="preRequis" [(ngModel)]="preRequis"></p>
+    
+    <button type="button" (click)="addFormation()">Enregistrer</button> 
+    
+</fieldset>
+<router-outlet></router-outlet>

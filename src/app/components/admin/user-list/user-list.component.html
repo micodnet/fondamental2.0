@@ -1,0 +1,19 @@
+<p>user-Add Form!</p>
+<!-- <ul>
+  <li *ngFor="let u of userlist">
+    {{u.nickname | uppercase}} - {{u.email}}
+  </li>
+</ul> -->
+<fieldset>
+  <legend>Enregistrement</legend>
+  <p>nom: <input type="text" placeholder="nom" [(ngModel)]="nom"></p>
+  <p>prenom: <input type="text" placeholder="prenom" [(ngModel)]="prenom"></p>
+  <p>dateNaissance: <input type="date" placeholder="dateNaissance" [(ngModel)]="dateNaissance"></p>
+  <p>login: <input type="text" placeholder="login" [(ngModel)]="login"></p>
+  <p>email: <input type="text" placeholder="email" [(ngModel)]="email"></p>
+  <p>motDePasse: <input type="text" placeholder="motDePasse" [(ngModel)]="motDePasse"></p>
+  
+  <button type="button" (click)="addUser()">Enregistrer</button> 
+  
+</fieldset>
+<router-outlet></router-outlet>

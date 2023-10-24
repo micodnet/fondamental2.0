@@ -1,0 +1,345 @@
+<h6>Introduction à l'algorithmie</h6>
+
+<div class="colonne">
+    <p class="h">Présentation du cours:</p>
+        <div class="colonne-gauche">ALGORITHME
+            <ul>
+                <li>Définition</li>
+                <li>-nom masculin (d'Al-Khârezmi, médecin arabe).</li>
+                <li>-Suite de raisonnements ou d'opérations qui fournit la solution de certains problèmes.</li>
+                <li>- Objectifs Un algorithme sert à transmettre un savoir faire.</li>
+                <li>-Il décrit les étapes à suivre pour réaliser un travail.</li> 
+                <li>-Il permet d'expliciter clairement les idées de solution  d'un problème indépendamment d'un langage de programmation.</li>  
+                <li> L'utilisateur d'un algorithme n'aura qu'à suivre toutes les instructions, dans l'ordre pour arriver au résultat que doit donner l'algorithme.</li>
+            </ul>
+        </div>
+    <p class="h">Pseudo-code:</p>
+        <div class="colonne-droite">
+            <p class="h">Voici les règles de notre programme :</p>
+                <ul>
+                    <li>-Le joueur commence la partie sur la case “Départ”, et doit rejoindre la case “Arrivée”.</li>
+                    <li>-Le joueur peut se déplacer uniquement dans quatre sens : haut, bas, droite et gauche.</li>
+                    <li>-Le joueur devra ramasser des objets tout au long de son périple dans le labyrinthe pour s assurer de sortir du labyrinthe.</li>
+                    <li>-Le joueur a deux possibilités de jeu, soit un nombre de pas illimité, soit un nombre limité de pas.</li>
+                </ul>
+            <p>Oublions l ordinateur un moment, et réfléchissons à la manière dont nous pourrions construire ce jeu. Un algorithme n étant qu une solution à un problème, nous pouvons nous passer de nos amis les robots quelques instants.</p>
+        </div>
+    <div class="colonne-gauche">
+        <p>Découper un problème en sous-problèmes Quelles sont les opérations à réaliser par le joueur ?</p>
+            <ul>
+                <li>Listons-les en bloc :</li>
+                <li>Gérer les déplacements (haut, bas, gauche et droite).</li>
+                <li>Enregistrer le nombre de déplacements.</li>
+                <li>Compter le nombre de déplacements (un nombre de déplacements limité ou illimité).</li>
+                <li>Stocker les objets ramassés.</li>
+                <li>Parfait. Nous avons une bonne feuille de route!</li>
+                <li>Décrire un algorithme avec le pseudo-code</li>
+            </ul>
+        <p>Maintenant que nous avons pu découper notre problématique, comment allons-nous décrire les algorithmes qui vont résoudre ces sous-problèmes ? C'est là qu'entre en jeu le pseudo-code, ou LDA (langage de description d'algorithmes). </p>
+        <p>Le pseudo-code est une manière informelle de décrire la programmation, qui ne nécessite aucune syntaxe de langage de programmation stricte, ni aucune considération technologique sous-jacente.</p>
+        <p>Il est utilisé pour créer l'ébauche ou le brouillon d'un programme.</p>  
+        <p>Tout au long du cours, vous allez voir comment décrire chaque nouveau concept de la programmation à l'aide du pseudo-code. Mais commençons pour l'instant par voir un exemple simple de pseudo-code pour décrire les déplacements du joueur.</p>
+        <p>Cela vous permettra de vous familiariser avec la syntaxe.</p> 
+        <p>Il n'existe aucune norme standard pour la syntaxe du pseudo-code, car ce n'est pas un programme exécutable. Cependant, certaines normes limitées existent, mais qui peuvent varier en fonction des personnes.</p>
+        <p>Exemple de labyrinthe en 3 cases par 3 cases</p>
+        <div class="colonne-droite"><img src="https://user.oc-static.com/upload/2022/03/24/16481137434451_FR_4366701_ALGO_STATICS_P1C3-1.jpg" alt="labyrinthe"></div>
+        <p>Voici le pseudo-code qui décrit les déplacements du joueur du point de départ jusqu'à l'arrivée :</p>
+    </div>
+        <div>
+            <p class="h">Algorithme déplacement</p>
+            <p>Début</p>
+                <ul>
+                    <li>Déplacement à droite</li>
+                    <li>Déplacement en haut</li>
+                    <li>Déplacement à droite</li>
+                    <li>Déplacement en haut</li>
+                </ul>
+            <p>Fin</p>
+        </div>
+    <div class="colonne-gauche">
+        <p class="h">Comment faut-il lire ce pseudo-code ?</p>
+        <p>Le nom de l'algorithme est suivi du mot “Algorithme”.</p>
+        <p>Deux mots-clés permettent de délimiter le début et la fin de l'algorithme :  Début et Fin  .</p>
+        <p>Les instructions de l'algorithme se trouvent entre les mots-clés Début  et Fin  .</p>
+        <p>À vous de jouer</p>
+        <p> Contexte</p>
+        <p>Au fil des chapitres, vous allez développer des algorithmes pour faire agir votre personnage dans le labyrinthe.</p>
+        <p>Pour cette étape, l'objectif est de mener votre personnage du point de départ à l'arrivée.</p>
+        <p>Voici le labyrinthe en question :</p>
+        <div class="colonne-droite"><img src="https://user.oc-static.com/upload/2022/03/24/16481138071096_FR_4366701_ALGO_STATICS_P1C3-2.jpg" alt="lab2"></div>
+        <p>Labyrinthe en 4 cases par 4 cases avec point de départ en bas à gauche et point d'arrivée en haut à droite</p>
+        <p>Voici le labyrinthe à utiliser dans cet exercice</p>
+        <p>Consignes</p>
+        <p>Vous pouvez utiliser les instructions suivantes dans votre algorithme pour décrire les déplacements :</p>
+            <ul>
+                <li>Déplacement à droite.</li>
+                <li>Déplacement à gauche.</li>
+                <li>Déplacement en haut.</li>
+                <li>Déplacement en bas.</li>
+            </ul>
+        <p>>Écrivez les deux algorithmes possibles pour décrire le trajet du point de départ à l'arrivée !</p>
+        <p>Vérifiez votre travail</p>
+        <p>Voici les deux solutions possibles pour atteindre votre objectif :</p>
+        <p>Solution 1 :</p>
+        <p>Algorithme solution 1</p>
+            <ul>
+                <li>Début</li>
+                <li>Déplacement à droite</li>
+                <li>Déplacement à droite</li>
+                <li>Déplacement à droite</li>
+                <li>Déplacement en haut</li>
+                <li>Déplacement en haut</li>
+                <li>Déplacement en haut</li>
+                <li>Fin</li>
+            </ul>
+        <p>Solution 2 :</p>
+        <p>Algorithme solution 2</p>
+            <ul>
+                <li>Début</li>
+                <li>Déplacement en haut</li>
+                <li>Déplacement en haut</li>
+                <li>Déplacement à droite</li>
+                <li>Déplacement en haut</li>
+                <li>Déplacement à droite</li>
+                <li>Déplacement à droite</li>
+                <li>Fin</li>
+            </ul>
+        <p>En résumé </p>
+        <p>Pensez à découper votre problème complexe en sous-problèmes plus simples à résoudre.</p>
+        <p>Utilisez le pseudo-code pour décrire votre algorithme.</p>
+        <p>Le pseudo-code est simplement une implémentation d'un algorithme sous la forme d'annotations et de texte informatif écrit en langage clair.</p>
+        <p>Les instructions d'un pseudo-code sont délimitées par les mots-clés  Début  etFin.</p>
+        <p>Comment communiquer avec un ordinateur?</p>
+        <p>Grâce à un langage de programmation, pardi! Rendez-vous au prochain chapitre pour le découvrir.</p>
+    </div>
+        <div class="colonne-gauche">
+            <p>Pour communiquer avec un ordinateur, vous avez d'abord besoin d'un langage. </p>
+            <p>Entre humains, il existe beaucoup de langues différentes qui ont chacune leur usage. </p>
+            <p>Nous avons d'ailleurs plusieurs familles de langues organisées souvent autour d'un alphabet : </p>
+            <p>les langues indo-européennes (dont le français, l'espagnol ou l'anglais), les langues sino-tibétaines (dont le mandarin), les langues sémitiques (dont l'arabe), etc.</p>
+            <p>Ces langues partagent très souvent bien plus qu'un alphabet. Vous voyez où je veux en venir : </p>
+            <p>par exemple, en français nous utilisons des verbes quand nous voulons exprimer une action. </p>
+            <p>On utilise aussi des noms pour désigner les objets ou les personnes : une chaise, un tableau, une fille.</p>
+            <p>Les langages de programmation utilisent une logique très semblable. Dans ce cours, nous nous intéresserons à la programmation structurée qui est un des paradigmes de programmation les plus connus.</p>
+            <p>Un paradigme est une manière de concevoir une situation à la fois dans ses problématiques et dans les différentes solutions à apporter.</p>
+            <p>En programmation structurée, nous découpons un problème en micro tâches indépendantes les unes des autres, et modulaires.</p>
+            <p>C'est exactement ce que nous sommes en train de faire!</p>
+            <p>Les noms : les variables</p>
+            <p>Une variable est une manière de faire référence à un objet.</p>
+            <p>Dans le langage courant, c'est exactement ce que nous appelons "nom". </p>
+            <p>Qu'est-ce qu'un mot, sinon une étiquette que nous avons collée sur un objet pour pouvoir y faire référence plus tard? Une variable a donc une valeur, et un mot qui permet d'accéder à cette valeur. </p>
+            <p>Vous pouvez donc soit lire la valeur soit la modifier.</p>
+            <p>Nous pouvons par exemple créer deux variables dans notre algorithme pour compter le nombre de déplacements et le score du joueur, qu'on aura initialisés à 0 au début du programme.</p>
+            <p>Vous pouvez déclarer l'ensemble des variables dans le pseudo-code dans une section dédiée aux variables ; cela permet de donner une indication des différentes variables de l'algorithme.</p>
+            <p>Vous placerez cette section juste avant le mot-clé Début  , comme ceci :</p>
+            <p>Algorithme DéclarerVariable</p>
+                <ul>
+                    <li>Variable</li>
+                    <li>déplacement ← 0</li>
+                    <li>score ← 0</li>
+                    <li>Début</li>
+                    <li>Fin</li>
+                </ul>
+            <p>Mettons-nous d'accord sur la manière de mettre à jour les variables, à travers ce tableau qui résume les différentes possibilités :</p>
+            <p>Action</p>
+            <p>Variable</p>
+            <p>Valeur ajoutée</p>
+            <p>un déplacement</p>
+            <p>déplacement  +1</p>
+            <p>un déplacement à droite score        +10</p>
+            <p>un déplacement à gauche score        +20</p>
+            <p>un déplacement en haut  score        +10</p>
+            <p>un déplacement en bas   score        +20</p>
+            <p>Prenons le labyrinthe ci-dessous, et essayons de construire l'algorithme qui permet de rejoindre la case d'arrivée.</p>
+            <p>Il faudra prendre en compte la mise à jour de chaque variable.</p>
+            <p>Labyrinthe en 3 cases par 3 cases avec un point de départ en bas à gauche et un point d'arrivée en haut à gauche</p>
+        <div class="colonne-droite"><img src="https://user.oc-static.com/upload/2022/03/24/16481138723569_FR_4366701_ALGO_STATICS_P1C4-1.jpg"alt="lab3"></div>
+        <p>Voici le pseudo-code :</p>
+        <p>Algorithme variable</p>
+        <p>Variable</p>
+        <p>déplacement ← 0</p>
+        <p>score ← 0</p>
+            <ul>
+                <li>Début</li>
+                <li>Déplacement à droite</li>
+                <li>déplacement ← déplacement + 1</li>
+                <li>score ← score + 10</li>
+                <li>Déplacement en haut</li>
+                <li>déplacement ← déplacement + 1</li>
+                <li>score ← score + 10</li>
+                <li>Déplacement en haut</li>
+                <li>déplacement ← déplacement + 1</li>
+                <li>score ← score + 10</li>
+                <li>Déplacement à gauche</li>
+                <li>déplacement ← déplacement + 1</li>
+                <li>score ← score + 20</li>
+                <li>Fin</li>
+            </ul>
+        <p>Ainsi, à la fin du jeu, la variable déplacement  contient la valeur 4, et la variable score  contient la valeur 50.</p>
+        <p>Les verbes : les fonctions</p>
+        <p>À présent, voyons comment simplifier la mise à jour des deux variables en regroupant les instructions dans un seul même bloc.</p>
+        <p>Vous avez sûrement pu le remarquer, nous avons dû écrire plusieurs fois les instructions qui permettent de changer les valeurs des deux variables.</p>
+        <p>Nous allons utiliser ce qu'on appelle, en programmation, une fonction.</p>
+        <p>Il s'agit d'un bloc qui regroupe plusieurs actions. </p>
+        <p>Vous pouvez réutiliser ce bloc autant de fois que vous le voulez en invoquant son nom. </p>
+        <p>Une fonction peut aussi être vue comme une moulinette qui va prendre des informations en entrée, les traiter et en renvoyer d'autres en sortie.</p>
+        <p>C'est en quelque sorte un mini-algorithme.</p>
+        <p>Lorsqu'une fonction est "appelée", le programme "quitte" la section de code en cours et commence à exécuter la première ligne à l'intérieur de la fonction.</p>
+        <p>Nous allons maintenant créer notre fonction à partir des critères suivants :</p>
+            <ul>
+                <li>Nom: maj_déplacement_score</li>
+                <li>Paramètres d'entrée</li>
+                <li>déplacement</li>
+                <li>score</li>
+                <li>point_de_déplacement  (point en fonction du sens de déplacement)</li>
+                <li>Instructions</li>
+                <li>Ajouter +1 à la variable déplacement</li>
+                <li>Incrémenter la variable score  à l'aide du paramètre point_de_déplacement</li>
+                <li>Paramètres de sortie</li>
+                <li>Pas de paramètre de sortie</li>
+            </ul>
+        <p>Nous pouvons décrire cette fonction à l'aide du pseudo-code :</p>
+        <p>Fonction maj_déplacement_score(déplacement, score, point_de_déplacement)</p>
+            <ul>
+                <li>Début</li>
+                <li>déplacement ← déplacement + 1</li>
+                <li>score ← score + point_de_déplacement</li>
+                <li>Fin</li>
+            </ul>
+        <p>Vous remarquerez qu'il n'y a pas de différence avec la description d'un algorithme en pseudo-code, sauf que nous avons ajouté entre parenthèses les paramètres d'entrée.</p>
+        <p>Vous pouvez ajouter avant la fin de la fonction, avec le mot-clé Retourner  , les valeurs de sortie, s'il y en a.</p>
+        <p>En langage informatique, la création d'une fonction est ce que nous appelons une déclaration. Son utilisation est son exécution.</p>
+        <p>Nous utiliserons  la fonction maj_déplacement_score pour modifier notre algorithme précédent ainsi :</p>
+            <ul>
+                <li>Algorithme variable</li>
+                <li>Variable</li>
+                <li>déplacement ← 0</li>
+                <li>score ← 0</li>
+                <li>Début
+                    <ul>
+                        <li>Déplacement à droite</li>
+                        <li>maj_déplacement_score(déplacement, score, 10)</li>
+                        <li>Déplacement en haut</li>
+                        <li>maj_déplacement_score(déplacement, score, 10)</li>
+                        <li>Déplacement en haut</li>
+                        <li>maj_déplacement_score(déplacement, score, 10)</li>
+                        <li>Déplacement à gauche</li>
+                        <li>maj_déplacement_score(déplacement, score, 20)</li>
+                    </ul>
+                </li>
+            <li>Fin</li>
+        </ul>
+        <p>À vous de jouer</p>
+        <p>Contexte</p>
+        <p>Reprenons notre périple dans le labyrinthe.</p>
+        <p>Considérons le pseudo-code suivant qui dirige les déplacements du joueur dans le labyrinthe :</p>
+        <p>Algorithme déplacement</p>
+        <p>Variable</p>
+        <p>déplacement ← 0</p>
+        <p>score ← 0</p>
+        <p>Début</p>
+            <ul>
+                <li>Déplacement en haut</li>
+                <li>Déplacement en haut</li>
+                <li>Déplacement à droite</li>
+                <li>Déplacement à gauche</li>
+                <li>Déplacement en bas</li>
+                <li>Déplacement en bas</li>
+            </ul>
+        <p>Fin</p>
+        <p>Vous allez mettre en place dans cet exercice une fonction permettant de calculer votre score selon le nombre de déplacements effectués.</p>
+        <p>Labyrinthe en 4 cases par 4 cases avec un point de départ en bas à gauche et un point d'arrivée en haut à droite</p>
+        <p>Voici le labyrinthe à utiliser de cet exercice</p>
+        <div class="colonne-droite"><img src="https://user.oc-static.com/upload/2022/03/24/16481140439378_FR_4366701_ALGO_STATICS_P1C3-2.jpg" alt="lab4"></div>
+        <p>Consignes</p> 
+        <p>Reprenez le pseudo-code ci-dessus et adaptez-le en fonction des consignes suivantes :</p> 
+        <p>Un déplacement incrémente la variable déplacement  de 1.</p> 
+        <p>Incrémentation du score  en fonction du sens de déplacement : </p> 
+        <ul>
+            <li>à gauche :  50 points / le nombre de déplacements</li>
+            <li>à droite :  70 points  / le nombre de déplacements</li>
+            <li>en haut :  25 points  / le nombre de déplacements</li>
+            <li>en bas :  90 points  / le nombre de déplacements</li>
+        </ul>
+        <p>Si le joueur passe à nouveau sur une même case, il faut décrémenter le score de 25 points.</p>
+        <p>Si le joueur revient à la case Départ, le score  est réinitialisé à 0.</p>
+        <p>Votre objectif : </p>
+        <p>Créez l'algorithme qui prend en compte l'ensemble des consignes ci-dessus.</p>
+        <p>N'hésitez pas à écrire à côté de chaque instruction la valeur courante des variables déplacement  et score  .</p>
+        <p>Créez une fonction qui permet de mettre à jour les variables déplacement  et score  .</p>
+        <p>Créez une fonction qui permet de réinitialiser la variable score  à 0.</p>
+        <p>Adaptez votre algorithme avec les deux nouvelles fonctions.</p>
+        <p>Vérifiez votre travail</p>
+        <p>Voici les quatre étapes à suivre pour obtenir le résultat final de cet exercice :</p>
+        <p>Première étape : création de l'algorithme de déplacement</p>
+            <ul>
+                <li>Algorithme déplacement</li>
+                <li>Variable</li>
+                <li>déplacement ← 0</li>
+                <li>score ← 0</li>
+                <li>Début
+                    <ul>
+                        <li>Déplacement en haut déplacement ← déplacement + 1 score ← score + 25</li>
+                        <li>Déplacement en haut déplacement ← déplacement + 1 score ← score + 25</li>
+                        <li>Déplacement à droite déplacement ← déplacement + 1 score ← score + 70</li>
+                        <li>Déplacement à gauche déplacement ← déplacement + 1 score ← score + 50 - 25 (Le joueur revient sur une case)</li>
+                        <li>Déplacement en bas déplacement ← déplacement + 1 score ← score + 90 - 25 (Le joueur revient sur une case)</li>
+                        <li>Déplacement en bas déplacement ← déplacement + 1 score ← score + 90 - 25 (Le joueur revient sur une case)</li>
+                        <li>score ← 0 (Le joueur est revenu à la case départ donc score = 0)</li>
+                    </ul>
+                </li>
+                <li>Fin</li>
+            </ul>
+        <p>Seconde étape : création de la fonction de mise à jour des variables déplacement et score</p>
+        <p>Fonction maj_déplacement_score(déplacement, score, point_de_déplacement)</p>
+            <ul>
+                <li>Début</li>
+                <li>déplacement ← déplacement + 1</li>
+                <li>score ← score + (point_de_déplacement / déplacement)</li>
+                <li>Fin</li>
+            </ul>
+        <p>Troisième étape : création de la fonction de réinitialisation du score</p>
+        <p>Fonction réintialiser_score(score)</p>
+            <ul>
+                <li>Début</li>
+                <li>score ← 0/li>
+                <li>Fin</li>
+            </ul>
+        <p>Quatrième étape : adaptation de l'algorithme avec les deux fonctions précédentes</p>
+        <p>Algorithme déplacement</p>
+            <ul>
+                <li>Variable</li>
+                <li>déplacement ← 0</li>
+                <li>score ← 0</li>
+                <li>Début
+                    <ul>
+                        <li>Déplacement à droite</li>
+                        <li>maj_déplacement_score(déplacement, score, 25)</li>
+                        <li>Déplacement en haut</li>
+                        <li>maj_déplacement_score(déplacement, score, 25)</li>
+                        <li>Déplacement en haut</li>
+                        <li>maj_déplacement_score(déplacement, score, 70)</li>
+                        <li>Déplacement en bas</li>
+                        <li>maj_déplacement_score(déplacement, score, 25 - 25)</li>
+                        <li>Déplacement en bas</li>
+                        <li>maj_déplacement_score(déplacement, score, 90 - 25)</li>
+                        <li>Déplacement à gauche</li>
+                        <li>maj_déplacement_score(déplacement, score, 90 - 25)</li>
+                        <li>réintialiser_score(score)</li>
+                    </ul>
+                </li>
+            <li>Fin</li>
+        </ul>
+        <p>En résumé </p>
+        <p>La plupart des langages de programmation ont une structure de base similaire les uns aux autres.</p>
+        <p>Les variables sont utilisées pour stocker des informations à référencer et à manipuler dans un programme informatique.</p>
+        <p>Une fonction est simplement un "morceau" de code que vous pouvez réutiliser, plutôt que de le réécrire plusieurs fois.</p>
+        <p>Les fonctions "prennent" généralement des données en entrée, les traitent et "renvoient" un résultat.</p>
+        <p>Vous avez découvert le monde des variables et comment simplifier votre algorithme en le découpant en fonctions. </p>
+        <p>Il est maintenant temps de tester vos connaissances à l'aide d'un petit quiz dans le chapitre suivant. Bonne chance ! </p>
+    </div>
+</div>
+<embed src="https://f2school.com/wp-content/uploads/2019/12/Cours-ALGORITHMIQUE-04.pdf" class="agrandir-survol">
+<embed src="https://f2school.com/wp-content/uploads/2019/12/Cours-ALGORITHMIQUE-01.pdf" class="agrandir-survol">
+<embed src="https://f2school.com/wp-content/uploads/2019/12/Cours-ALGORITHMIQUE-02.pdf" class="agrandir-survol">
+<embed src="https://f2school.com/wp-content/uploads/2019/12/Cours-ALGORITHMIQUE-03.pdf" class="agrandir-survol">

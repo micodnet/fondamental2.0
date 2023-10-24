@@ -1,0 +1,11 @@
+.footer {
+    height: 50px;
+    background-color: rgb(146, 54, 54);
+    position: fixed;
+    bottom: 0; 
+    width: 100%; 
+    //color: #fff;
+    padding: 0%; 
+    display: flex;
+    justify-content: space-between; /* ou d'autres valeurs comme 'space-around', 'center', etc.space-between */
+}

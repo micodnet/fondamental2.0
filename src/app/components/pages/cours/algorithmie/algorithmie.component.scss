@@ -1,0 +1,58 @@
+embed {
+    padding-right: 20px;
+    padding-left: 5px;
+}
+.lab2 {
+    width: 10px;
+    height: 20px;
+ padding-right: 20px;
+ margin-right: 20px;
+}
+img{
+    width: 50%;
+    height: 50%;
+}
+.colonne {
+    //display: grid;
+    //grid-template-columns: 2fr; /* Une seule colonne de largeur égale */
+    display: flex;
+    flex-direction: column;
+    //column-count: 2; /* Deux colonnes */
+    //column-gap: 20px; /* Espacement entre les colonnes */
+    text-align: center;
+    
+  }
+
+  .colonne > div {
+    width: 100%; /* Largeur totale des éléments en colonne */
+    text-align: center;
+  }
+
+  .colonne-gauche {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+  }
+
+  .colonne-droite {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .h {
+    text-align: center;
+  }
+
+  .agrandir-survol {
+    transition: transform 0.3s; /* Ajoute une transition sur la propriété "transform" */
+  }
+  
+  .agrandir-survol:hover {
+    transform: scale(2.2); /* Échelle de 110% au survol */
+  }
+

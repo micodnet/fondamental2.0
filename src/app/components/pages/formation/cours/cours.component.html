@@ -1,0 +1,13 @@
+
+<p>cours-Add Form!</p>
+
+<fieldset>
+    <legend>Enregistrement</legend>
+    <p>titre: <input type="text" placeholder="titre" [(ngModel)]="titre"></p>
+    <p>description: <input type="text" placeholder="description" [(ngModel)]="description"></p>
+    <p>formationId: <input type="number" placeholder="formationId" [(ngModel)]="formationId"></p>
+    
+    <button type="button" (click)="addCourse()">Enregistrer</button> 
+    
+</fieldset>
+<router-outlet></router-outlet>

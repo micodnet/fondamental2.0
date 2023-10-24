@@ -1,0 +1,25 @@
+.titre {
+    text-align: center; /* Centre horizontalement */
+            position: absolute;
+            top: 50%; /* Centre verticalement */
+            left: 50%; /* Centre horizontalement */
+            transform: translate(-50%, -50%); /* Centrage précis */
+}
+
+button {
+    border-radius: 5px; 
+    background-color: lemonchiffon; 
+    color: #b01010; 
+    padding: 3px 3px; 
+    //border: none; 
+    cursor:pointer; 
+    border-color: lightblue;
+    //width: 10%;
+    
+  }
+  img {
+    width: 100%;
+    height: 300px;
+  }
+  
+  

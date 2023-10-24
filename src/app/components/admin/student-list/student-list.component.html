@@ -1,0 +1,12 @@
+<p>student-Add Form!</p>
+
+<fieldset>
+    <legend>Enregistrement</legend>
+    <p>login: <input type="text" placeholder="login" [(ngModel)]="login"></p>
+    <p>email: <input type="text" placeholder="email" [(ngModel)]="email"></p>
+    <p>motDePasse: <input type="text" placeholder="motDePasse" [(ngModel)]="motDePasse"></p>
+    
+    <button type="button" (click)="addStudent()">Enregistrer</button> 
+    
+</fieldset>
+<router-outlet></router-outlet>

@@ -1,0 +1,88 @@
+
+<h5 class="titre">DashBoard admin:</h5>
+<menu type="toolbar">
+    <button class="button" (click)="getUser()">liste de Users</button>
+    <button class="button" (click)="getStudent()">liste de Students</button>
+    <button class="button" (click)="getFormation()">liste de Formations</button>
+    <button class="button" (click)="getCourse()">liste de Cours</button>
+</menu>
+<hr/>
+<div class="content"><img src="/assets/ordi.jpg" alt="img"></div>
+<div *ngIf="showUsersList" class="ma-liste-us" class="container">
+    <div>
+        <button class="button" (click)="navigateToRegisterComponent()">Add</button>
+        <button class="button">GetById</button>
+        <button class="button">Update</button>
+        <button class="button">Delete</button>
+        <fieldset><legend>Liste users</legend>
+            <ul *ngFor="let us of users" >
+                <li>
+                <p>Id: {{us.id}}</p>
+                <p>Nom: {{us.lastName}}</p>
+                <p>Prénom: {{us.firstName}}</p>
+                <p>Date de naissance: {{us.birthDate}}</p>
+                <p>Login: {{us.nickName}}</p>
+                <p>Email: {{us.email}}</p>
+                <p>Mot de passe: {{us.psswdHash}}</p>
+                <p>Id-role: {{us.roleId}}</p>
+                <!-- <a href="{{fi.url}}" target="_blank">annonce</a>
+                <img class="image"src="{{fi.urlPoster}}"> -->
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+    
+</div>
+<div *ngIf="showStudentsList" class="ma-liste-st">
+    <button class="button" (click)="navigateStudentList()">Add</button>
+    <button class="button">GetById</button>
+    <button class="button">Update</button>
+    <button class="button">Delete</button>
+    <fieldset><legend>Liste students</legend>
+        <ul *ngFor="let st of students">
+            <li>
+            <p>Id: {{st.id}}</p>
+            <p>Login: {{st.login}}</p>
+            <p>Email: {{st.email}}</p>
+            <p>Mot de passe: {{st.psswdHash}}</p>
+            <p>Id-utilisateur: {{st.userId}}</p>
+            </li>
+        </ul>
+    </fieldset>
+</div>
+<div *ngIf="showFormationsList" class="ma-liste-fo">
+    <button class="button" (click)="navigateFormation()">Add</button>
+    <button class="button">GetById</button>
+    <button class="button">Update</button>
+    <button class="button">Delete</button>
+    <fieldset><legend>Liste formations</legend>
+        <ul *ngFor="let fo of formations">
+            <li>
+            <p>Id: {{fo.id}}</p>
+            <p>Nom: {{fo.name}}</p>
+            <p>Description: {{fo.description}}</p>
+            <p>Date de début: {{fo.dateDebut}}</p>
+            <p>Durée: {{fo.duree}}</p>
+            <p>Prés-requis: {{fo.preRequis}}</p>
+            </li>
+        </ul>
+    </fieldset>
+</div>
+<div *ngIf="showCoursesList" class="ma-liste-co">
+    <button class="button" (click)="navigateCours()">Add</button>
+    <button class="button">GetById</button>
+    <button class="button">Update</button>
+    <button class="button">Delete</button>
+    <fieldset><legend>Liste cours</legend>
+        <ul *ngFor="let co of courses">
+            <li>
+            <p>Id: {{co.id}}</p>
+            <p>Titre: {{co.titre}}</p>
+            <p>Description: {{co.description}}</p>
+            <p>Id-formation: {{co.formationId}}</p>
+            </li>
+        </ul>
+    </fieldset>
+</div>
+
+

@@ -1,0 +1,16 @@
+<div class="flex-container">
+    <h2>Moodle 2.0</h2>
+    <h4 class="isConnected" *ngIf="isConnected; else notConnected" >Bienvenue</h4>
+    <ng-template #notConnected >
+      <h4 class="notConnected">Déconnecter</h4>
+    </ng-template>
+  </div>
+  
+ <div class="menu">
+     <ul>
+       <li><button type="button" routerLink="authentification">Auth</button></li>
+       <li><button type="button" routerLink="admin">Admin</button></li>
+       <li><button type="button" routerLink="pages">Cours</button></li>
+     </ul>
+ </div>
+ <hr/>

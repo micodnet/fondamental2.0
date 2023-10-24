@@ -1,0 +1,38 @@
+.content {
+    margin-right: 20px;
+    margin-left: 120px; /* Ajoute une marge équivalente à la largeur du menu à gauche */
+    padding: 15px; /* Ajoute un espace intérieur pour le contenu principal */
+    transition: margin-left 0.3s; /* Ajoute une transition douce lors de l'ouverture/fermeture du menu */
+  }
+  
+  /* Styles pour masquer le menu en responsive (optionnel) */
+  @media (max-width: 768px) {
+    .menu {
+      width: 1; /* Cache le menu */
+    }
+  }
+
+  #banniere  {
+    width: 100%; /* Largeur de la bannière */
+    height: 230px; /* Hauteur de la bannière */
+    background-size: 100% 100%; /* Étirer l'image pour qu'elle s'adapte à la largeur et à la hauteur */
+    .translate {
+      transition: translate 1s;
+    }
+    
+    div:hover .content {
+      transition:translate 200px 50px;
+    }
+}
+
+  button {
+    align-items: center;
+    border-radius: 5px; 
+    background-color: lemonchiffon; 
+    color: #b01010; 
+    padding: 1px 3px; 
+    //border: none; 
+    cursor:pointer; 
+    border-color: lightblue;
+  }
+  

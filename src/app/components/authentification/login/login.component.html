@@ -1,0 +1,9 @@
+<fieldset *ngIf="!isConnected">
+    <legend>Connexion</legend>
+    <p>Email : <input type="email" [(ngModel)]="email"  placeholder="Email"></p>
+    <p>Mot de passe : <input type="password" [(ngModel)]="pwd"  placeholder="Mot de passe"></p>
+    <button type="button" (click)="login()">Connexion</button>
+    <button type="button" (click)="logout()">Deconnexion</button>
+  </fieldset>
+  
+  
