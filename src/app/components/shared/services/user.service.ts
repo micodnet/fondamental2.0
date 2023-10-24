@@ -4,7 +4,7 @@ import { environement } from 'src/environement';
 import { User } from '../models/user.model';
 import { Observable, Subject } from 'rxjs';
 import { UserLogModel } from '../models/user-log.model';
-import jwtDecode  from  'jwt-decode';
+import  jwtDecode  from  'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
