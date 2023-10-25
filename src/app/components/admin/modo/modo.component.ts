@@ -1,39 +1,27 @@
 import { Component } from '@angular/core';
-import { UserService } from '../shared/services/user.service';
-import { User } from '../shared/models/user.model';
-import { Student } from '../shared/models/student.model';
-import { Formation } from '../shared/models/formation.model';
-import { Course } from '../shared/models/cours.model';
-import { StudentService } from '../shared/services/student.service';
-import { FormationService } from '../shared/services/formation.service';
-import { CoursService } from '../shared/services/cours.service';
+import { Student } from '../../shared/models/student.model';
+import { Formation } from '../../shared/models/formation.model';
+import { Course } from '../../shared/models/cours.model';
+import { PdfCours } from '../../shared/models/pdf-cours.model';
+import { StudentService } from '../../shared/services/student.service';
 import { Router } from '@angular/router';
-import { PdfCours } from '../shared/models/pdf-cours.model';
-import { PdfService } from '../shared/services/pdf.service';
+import { PdfService } from '../../shared/services/pdf.service';
+import { CoursService } from '../../shared/services/cours.service';
+import { FormationService } from '../../shared/services/formation.service';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  selector: 'app-modo',
+  templateUrl: './modo.component.html',
+  styleUrls: ['./modo.component.scss']
 })
-export class AdminComponent {
+export class ModoComponent {
 
-  showUsersList: boolean = false;
   showStudentsList: boolean = false;
   showFormationsList: boolean = false;
   showCoursesList: boolean = false;
   showPdfList: boolean = false;
 
-  showUsers() {
-    this.showUsersList = true;
-    this.showStudentsList = false;
-    this.showFormationsList = false;
-    this.showCoursesList = false;
-    this.showPdfList = false;
-  }
-
   showStudents() {
-    this.showUsersList = false;
     this.showStudentsList = true;
     this.showFormationsList = false;
     this.showCoursesList = false;
@@ -41,7 +29,6 @@ export class AdminComponent {
   }
 
   showFormations() {
-    this.showUsersList = false;
     this.showStudentsList = false;
     this.showFormationsList = true;
     this.showCoursesList = false;
@@ -49,7 +36,6 @@ export class AdminComponent {
   }
 
   showCourses() {
-    this.showUsersList = false;
     this.showStudentsList = false;
     this.showFormationsList = false;
     this.showCoursesList = true;
@@ -57,20 +43,11 @@ export class AdminComponent {
   }
 
   showPdf() {
-    this.showUsersList = false;
     this.showStudentsList = false;
     this.showFormationsList = false;
     this.showCoursesList = false;
     this.showPdfList = true;
   }
-
-  users: User[] = [] 
-  nom! : string
-  prenom! : string
-  dateNaissance! : Date
-  login! : string
-  email! : string
-  motDePasse! : string
 
   students: Student[] = []
   
@@ -90,24 +67,12 @@ export class AdminComponent {
     content!: string
     courseId!: number 
 
-  constructor(private _userService: UserService,
-              private _studentService: StudentService,
+  constructor(private _studentService: StudentService,
               private _formationService: FormationService,
               private _courseService: CoursService,
               private _pdfService: PdfService,
               private router: Router
     ){}
-    navigateToRegisterComponent() {
-      this.router.navigate(['authentification/register']);
-    }
-
-    navigateStudentList() {
-      this.router.navigate(['studentlist']);
-    }
-
-    navigateFormation() {
-      this.router.navigate(['formation']);
-    }
 
     navigateCours() {
       this.router.navigate(['cours']);
@@ -116,10 +81,6 @@ export class AdminComponent {
     navigatePdf() {
       this.router.navigate(['pdf']);
     }
-
-  getUser(){this.showUsers()
-    this._userService.getUser().subscribe((liste: User[])=> console.log(this.users = liste))
-  }
 
   getStudent(){this.showStudents()
     this._studentService.getStudent().subscribe((liste1: Student[])=> console.log(this.students = liste1))

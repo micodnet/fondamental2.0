@@ -3,14 +3,17 @@
     <h4 class="isConnected" *ngIf="isConnected; else notConnected" >Bienvenue</h4>
     <ng-template #notConnected >
       <h4 class="notConnected">Déconnecter</h4>
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
     </ng-template>
   </div>
   
  <div class="menu">
      <ul>
-       <li><button type="button" routerLink="authentification">Auth</button></li>
-       <li><button type="button" routerLink="admin">Admin</button></li>
-       <li><button type="button" routerLink="pages">Cours</button></li>
+       <li><button title="auth" type="button" routerLink="authentification">Auth</button></li>
+       <li><button title="admin" type="button" routerLink="admin">Admin</button></li>
+       <li><button title="modo" type="button" routerLink="modo">Profs</button></li>
+       <li><button title="pages" type="button" routerLink="pages">Cours</button></li>
      </ul>
  </div>
  <hr/>
+ 

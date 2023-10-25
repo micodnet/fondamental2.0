@@ -13,7 +13,7 @@ import { LoginComponent } from './components/authentification/login/login.compon
 import { RegisterComponent } from './components/authentification/register/register.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { ChatHubComponent } from './components/chat-hub/chat-hub.component';
-import { PdfComponent } from './components/pages/cours/pdf/pdf/pdf.component';
+import { PdfComponent } from './components/pages/formation/pdf/pdf.component';
 import { AlgorithmieComponent } from './components/pages/cours/algorithmie/algorithmie.component';
 import { AnaliseModelisationComponent } from './components/pages/cours/analise-modelisation/analise-modelisation.component';
 import { SqlDeclaratifComponent } from './components/pages/cours/sql-declaratif/sql-declaratif.component';
@@ -39,6 +39,7 @@ import { StudentListComponent } from './components/admin/student-list/student-li
 import { ErreurComponent } from './components/shared/erreur/erreur.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import { CoursComponent } from './components/pages/formation/cours/cours.component';
+import { ModoComponent } from './components/admin/modo/modo.component';
 //import {HTTP_INTERCEPTORS } from '@angular/common/http';
 //import { TokenInterceptor } from 'src/app/components/shared/services/token.interceptor';
 //import { listResolver } from 'src/app/components/shared/services/list.resolver';
@@ -79,6 +80,7 @@ import { CoursComponent } from './components/pages/formation/cours/cours.compone
     UserListComponent,
     CoursComponent,
     ErreurComponent,
+    ModoComponent,
     
   ],
   imports: [

@@ -30,14 +30,18 @@ import { UserListComponent } from './components/admin/user-list/user-list.compon
 import { StudentListComponent } from './components/admin/student-list/student-list.component';
 import { FormationComponent } from './components/pages/formation/formation.component';
 import { CoursComponent } from './components/pages/formation/cours/cours.component';
+import { PdfComponent } from './components/pages/formation/pdf/pdf.component';
+import { ModoComponent } from './components/admin/modo/modo.component';
 
 const routes: Routes = [
   {path : '', redirectTo : 'login', pathMatch : 'full'},
   {path: 'admin', component: AdminComponent},
+  {path: 'modo', component: ModoComponent},
   {path : 'userlist',canActivate : [authGuard] , resolve : {maliste : listResolver}, component : UserListComponent},
   {path : 'studentlist', component: StudentListComponent},
   {path : 'formation', component: FormationComponent},
   {path : 'cours', component: CoursComponent},
+  {path : 'pdf', component: PdfComponent},
   {path: 'authentification', component: AuthentificationComponent, children:[
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent}, 

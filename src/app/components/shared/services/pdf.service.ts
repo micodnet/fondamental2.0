@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
+import { PdfCours } from '../models/pdf-cours.model';
+import { Observable, Subject} from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { environement } from 'src/environement';
-import { Course } from '../models/cours.model';
-import { Observable, Subject } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
-export class CoursService {
-
+export class PdfService {
   private url : string = environement.apiurl
 
   get isConnected() : boolean {
@@ -23,14 +23,14 @@ export class CoursService {
     private client : HttpClient
   ) { }
 
-  getCourse(): Observable <Course[]> {
+  getPdf(): Observable <PdfCours[]> {
     let myHeader : HttpHeaders = new HttpHeaders({"authorization" : "bearer "+ localStorage.getItem("token")})
-    return this.client.get<Course[]>(this.url + "course", {headers : myHeader})
+    return this.client.get<PdfCours[]>(this.url + "pdfCourse", {headers : myHeader})
   }
 
-  addCourse( titre: string, descriptioncours: string, formationId: number) {
+  addPdf( title: string, content: string, courseId: number) {
     let myHeader: HttpHeaders = new HttpHeaders({"authorization" : "bearer " + localStorage.getItem("token")})
-    this.client.post(this.url + "course",{title: titre, description: descriptioncours, formationId: formationId},{headers: myHeader}).subscribe({
+    this.client.post(this.url + "pdfCourse",{title: title, content: content, courseId:courseId},{headers: myHeader}).subscribe({
     next : () => {
       console.log("ça à marcher!");
     },

@@ -1,6 +1,8 @@
 <app-header></app-header>
 <div class="content" [ngStyle]=" { 'background-color' : darkColor } ">
     <button (click)="darkMode()">{{ isDark }}</button>
+
+    <button type="button" (click)="logout()">Deconnexion</button>
     <img id="banniere" src="../assets/LAbecedaire-des-institutions_la-formation-professionnelle.jpg" alt="banniere">
     <router-outlet></router-outlet>
 </div>

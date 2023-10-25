@@ -8,7 +8,9 @@ button {
     //border: none; 
     cursor:pointer; 
     border-color: lightblue;
+    font-size: small;
   }
+  
 .flex-container {
     
     background-color: rgb(146, 54, 54);
@@ -28,11 +30,11 @@ button {
     top:0;
 }
 .header {
+    
     position: fixed; 
-    //top: 0; 
+    
     width: 100%; 
     background-color: rgb(146, 54, 54); 
-    //color: 
     padding: 10px;
   }
   .menu {
@@ -72,5 +74,21 @@ button {
   }
 
   h2 {
+    padding-top: 15px;
+    font-size: large;
+    //color: #FFFFFF;
+    //background: #232323;
+    //text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ff1818, 0 0 30px #ff7418, 0 0 40px #ffd118, 0 0 55px #b4f5a2, 0 0 75px #eff5ed;
+    //color: #FFFFFF;
+    //background: #232323;
     color: orangered;
+  }
+
+  h4 {
+    padding-bottom: 15px;
+    font-size: large;
+    //color: #FFFFFF;
+    //background: #232323;
+    //text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ff1818, 0 0 30px #ff7418, 0 0 40px #ffd118, 0 0 55px #b4f5a2, 0 0 75px #eff5ed;
+    //color: #FFFFFF;
   }

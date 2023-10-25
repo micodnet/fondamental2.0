@@ -1,5 +1,49 @@
 <h6>Introduction ado-linq</h6>
 
-    <embed src="https://f2school.com/wp-content/uploads/2019/12/Cours-ALGORITHMIQUE-04.pdf">
-    
-    
+<div>
+    <div>
+        Fournisseur de données .NET Framework
+Les fournisseurs de données .NET Framework sont des composants explicitement conçus pour la manipulation des données et pour un accès aux données rapide, avant uniquement et en lecture seule. L'objet Connection assure la connectivité avec une source de données. L'objet Command permet d'accéder aux commandes de base de données en vue de retourner des données, de modifier des données, d'exécuter des procédures stockées et d'envoyer ou récupérer des informations sur les paramètres. Le DataReader fournit un flux très performant de données en provenance de la source de données. Enfin, le DataAdapter établit une passerelle entre l'objet DataSet et la source de données. Le DataAdapter utilise des objets Command pour exécuter des commandes SQL au niveau de la source de données afin d'une part de charger le DataSet avec des données, et d'autre part afin de répercuter dans la source de données les modifications apportées aux données contenues dans le DataSet. Pour plus d’informations, consultez Fournisseurs de données .NET Framework et Extraction et modification de données dans ADO.NET.
+
+DataSet
+Le DataSet ADO.NET est explicitement conçu pour un accès aux données indépendant de toute source de données. Il peut donc être utilisé avec plusieurs sources de données différentes, utilisé avec des données XML ou utilisé pour gérer des données locales de l'application. Le DataSet contient une collection d’un ou plusieurs objets DataTable constitués de lignes et de colonnes de données, ainsi que des informations concernant les contraintes de clé primaire, de clé étrangère et des informations relationnelles sur les données contenues dans les objets DataTable. Pour plus d’informations, consultez DataSets, DataTables et DataViews.
+
+Le diagramme suivant illustre la relation entre un fournisseur de données .NET Framework et un DataSet.
+
+Graphique ADO.Net
+Architecture ADO.NET
+
+Choix d'un DataReader ou d'un DataSet
+Quand vous décidez si votre application doit utiliser un DataReader (consultez Extraction de données à l’aide d’un DataReader) ou un DataSet (consultez DataSets, DataTables et DataViews), tenez compte du type de fonctionnalité nécessaire à votre application. Utilisez un DataSet pour effectuer les opérations suivantes :
+
+Mettre des données en cache localement dans votre application afin de pouvoir les manipuler. Si vous devez uniquement lire les résultats d'une requête, le DataReader est le meilleur choix.
+
+Fournir un accès distant entre couches ou à partir d'un service Web XML.
+
+Interagir dynamiquement avec les données par le biais par exemple de la liaison à un contrôle Windows Forms ou de la combinaison et la mise en relation de données de diverses sources.
+
+Réaliser un traitement complet des données sans qu'une connexion ouverte à la source de données soit nécessaire, ce qui libère la connexion pour d'autres clients.
+
+Si vous n'avez pas besoin de la fonctionnalité fournie par le DataSet, vous pouvez améliorer les performances de votre application en utilisant le DataReader pour retourner les données avec un accès en lecture seule et avant uniquement. Bien que DataAdapter utilise DataReader pour remplir le contenu de DataSet (consultez Remplissage d’un DataSet à partir d’un DataAdapter), vous pouvez vous servir de DataReader pour améliorer les performances, car vous allez économiser la mémoire consommée par DataSet, et éviter le traitement nécessaire à la création et au remplissage du contenu de DataSet.
+
+LINQ to DataSet
+LINQ to DataSet offre des fonctionnalités de requête ainsi qu’une vérification des types au moment de la compilation sur les données mises en cache dans un objet DataSet. Il vous permet d'écrire des requêtes dans l'un des langages de développement du .NET Framework, tels que C# ou Visual Basic. Pour plus d’informations, consultez LINQ to DataSet.
+
+LINQ to SQL
+La fonctionnalité LINQ to SQL prend en charge les requêtes sur un modèle objet mappé sur les structures de données d'une base de données relationnelle sans utiliser de modèle conceptuel intermédiaire. Chaque table est représentée par une classe distincte, associant étroitement le modèle objet au schéma de la base de données relationnelle. La fonctionnalité LINQ to SQL convertit des requêtes LINQ dans le modèle objet en données Transact-SQL et les envoie à la base de données en vue de leur exécution. Lorsque la base de données retourne les résultats, LINQ to SQL reconvertit les résultats en objets. Pour plus d’informations, consultez LINQ to SQL.
+
+ADO.NET Entity Framework
+ADO.NET Entity Framework est conçu pour permettre aux développeurs de créer des applications d'accès aux données en programmant à partir d'un modèle d'application conceptuel plutôt que directement sur un schéma de stockage relationnel. L'objectif est de limiter les opérations de codage et de maintenance requises par les applications orientées données. Pour plus d’informations, consultez ADO.NET Entity Framework.
+
+Services de données WCF
+Les services de données WCF (WCF Data Services) permettent de déployer des services de données sur le web ou un intranet. Les données sont structurées sous la forme d'entités et de relations conformément aux spécifications du modèle EDM. Les données déployées sur ce modèle sont adressables par le protocole HTTP standard. Pour plus d’informations, consultez WCF Data Services 4.5.
+
+XML et ADO.NET
+ADO.NET tire parti de la puissance du XML pour fournir un accès déconnecté aux données. ADO.NET a été conçu conjointement avec les classes XML du .NET Framework. Tous deux sont des composants d’une seule et même architecture.
+
+ADO.NET et les classes XML du .NET Framework convergent vers l’objet DataSet. Le DataSet peut être rempli de données provenant d'une source XML, qu'il s'agisse d'un fichier ou d'un flux XML. Le DataSet peut être écrit en XML conforme au W3C (World Wide Web Consortium), y compris son schéma, en tant que schéma en langage XSD (XML Schema Definition), quelle que soit la source des données contenues dans le DataSet. Le format de sérialisation natif du DataSet étant XML, il constitue un excellent support pour le déplacement de données entre couches, faisant ainsi du DataSet le meilleur choix pour communiquer à distance les données et le contexte du schéma vers et à partir d’un service web XML. Pour plus d’informations, consultez Documents et données XML.</div>
+</div>
+<embed class="pdf" src="https://www.orleans-informatique.com/info/cgo/cours/Fiche%20-%20SQL.pdf">
+    <embed src="https://www.mcours.net/cours/pdf/hasclic2/hassclic576.pdf">
+    <img src="https://learn.microsoft.com/fr-fr/dotnet/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif" alt="img">
+    <a href="https://learn.microsoft.com/fr-fr/dotnet/framework/data/adonet/linq-and-ado-net" title="lienMicrosoft"></a>

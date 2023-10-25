@@ -1,6 +1,6 @@
 export interface Course {
     id: number
-    titre: string
+    title: string
     description: string
     formationId: number
 }

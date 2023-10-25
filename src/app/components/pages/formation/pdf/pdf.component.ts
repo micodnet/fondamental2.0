@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-pdf',
   templateUrl: './pdf.component.html',
   styleUrls: ['./pdf.component.scss']
-  
 })
 export class PdfComponent {
 
