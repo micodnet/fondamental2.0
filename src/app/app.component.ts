@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './components/shared/services/user.service';
+//import { AuthService } from './components/shared/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +15,17 @@ export class AppComponent {
   
   isConnected! : boolean
 
-  constructor(private userService : UserService){}
+  constructor(private userService : UserService,
+             // private service: AuthService
+    ){}
   
+    // ngOnInit() {
+    //   this.service.connectionSubject.subscribe((etat :boolean) => {
+    //     this.isConnected = etat
+    //   })
+    //   this.service.connectionSubject.next(this.service.isConnected)
+    // }
+
   logout(){
     this.userService.logout()
   }

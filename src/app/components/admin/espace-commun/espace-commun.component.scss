@@ -1,0 +1,60 @@
+.titre {
+    text-align: center; /* Centre horizontalement */
+            position: absolute;
+            top: 50%; /* Centre verticalement */
+            left: 50%; /* Centre horizontalement */
+            transform: translate(-50%, -50%); /* Centrage précis */
+}
+
+button {
+  width: 80px; 
+  height: 30px;
+    border-radius: 5px; 
+    background-color: lemonchiffon; 
+    color: #b01010; 
+    padding: 3px 3px; 
+    //border: none; 
+    cursor:pointer; 
+    border-color: lightblue;
+    //width: 10%;
+    font-size: small;
+  }
+  img {
+    margin-left: 10%;
+    width: 80%;
+    height: 300px;
+    .element {
+      -webkit-filter: contrast(197%) invert(64%) opacity(27%) saturate(188%) sepia(5%);
+      -moz-filter: contrast(197%) invert(64%) opacity(27%) saturate(188%) sepia(5%);
+      filter: contrast(197%) invert(64%) opacity(27%) saturate(188%) sepia(5%);
+    }
+    .element {
+      -webkit-transform: rotate(37deg) skew(-9deg, 11deg) translate(-37px, 58px);
+      -moz-transform: rotate(37deg) skew(-9deg, 11deg) translate(-37px, 58px);
+      -o-transform: rotate(37deg) skew(-9deg, 11deg) translate(-37px, 58px);
+      -ms-transform: rotate(37deg) skew(-9deg, 11deg) translate(-37px, 58px);
+      transform: rotate(37deg) skew(-9deg, 11deg) translate(-37px, 58px);
+    }
+  }
+  .element {
+    background: rgba(255, 255, 255, 1);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 1);
+    border-radius: 5px 5px 5px 5px;
+    -webkit-box-shadow: 2px 2px 2px 2px rgba(84, 115, 125, 1);
+  box-shadow: 2px 2px 2px 2px rgba(84, 115, 125, 1);
+
+  background: #3f5efb;                           //degrader de couleurs
+  background: linear-gradient(180deg, #3f5efb 0%, #fc466b 100%);
+  }
+  .element {//image d'arriere plan
+    width: 600px;
+    height: 250px;
+    background-color: #999999;
+    background-image: url("https://htmlcss.tools/img/cute_cat.jpeg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: repeat;
+  }
+  

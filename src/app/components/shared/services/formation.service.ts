@@ -28,6 +28,12 @@ export class FormationService {
     return this.client.get<Formation[]>(this.url + "formation", {headers : myHeader})
   }
 
+  getFormationById(formationId: number): Observable <Formation> {
+    const url = `${this.url}/formation/getById/${formationId}`;
+    let myHeader : HttpHeaders = new HttpHeaders({"authorization" : "bearer "+ localStorage.getItem("token")})
+    return this.client.get<Formation>(this.url + "formation", {headers : myHeader})
+  }
+
   addFormation( name: string, description: string, dateDebut: Date, duree: Date, preRequis: string) {
     let myHeader: HttpHeaders = new HttpHeaders({"authorization" : "bearer " + localStorage.getItem("token")})
     this.client.post(this.url + "formation",{name: name, description: description, dateDebut:dateDebut, duree: duree, preRequis: preRequis},{headers: myHeader}).subscribe({

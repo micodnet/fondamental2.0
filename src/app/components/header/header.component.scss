@@ -1,5 +1,7 @@
 
 button {
+  width: 60px; 
+  height: 25px;
     align-items: center;
     border-radius: 5px; 
     background-color: lemonchiffon; 
@@ -9,6 +11,11 @@ button {
     cursor:pointer; 
     border-color: lightblue;
     font-size: small;
+  }
+  #logout {
+    height: 25px;
+    margin-left: -16%;
+    margin-top: 20px;
   }
   
 .flex-container {
@@ -37,7 +44,10 @@ button {
     background-color: rgb(146, 54, 54); 
     padding: 10px;
   }
+  #titreMenu {font-size: x-large;}
+
   .menu {
+    
     position: fixed; /* Fixe le menu */
     left: 0; /* Place le menu à gauche de la fenêtre du navigateur */
     top: 0; /* Place le menu en haut de la fenêtre du navigateur */

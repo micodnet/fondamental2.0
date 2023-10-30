@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/components/shared/services/auth.service';
 import { User } from '../../shared/models/user.model'; 
 import { UserService } from '../../shared/services/user.service';
@@ -23,7 +23,8 @@ export class UserListComponent {
   constructor(
     private _auth : AuthService,
     private _ar : ActivatedRoute,
-    private _userService : UserService
+    private _userService : UserService,
+    private _router: Router 
     ){}
 
     addUser(){
@@ -38,4 +39,16 @@ export class UserListComponent {
 //       next : (list : User[]) => this.userlist = list
 //    })
 //   }
+
+// ngOnInit() {
+//   this.listPerson = this.service.listPersonne
+// }
+
+// delete(index : number) {
+//   this.service.deletePerson(index)
+// }
+
+// update(index : number) {
+//   this.router.navigate(["update", index])
+// }
 }

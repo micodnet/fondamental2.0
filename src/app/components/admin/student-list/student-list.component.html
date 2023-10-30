@@ -2,9 +2,18 @@
 
 <fieldset>
     <legend>Enregistrement</legend>
-    <p>login: <input type="text" placeholder="login" [(ngModel)]="login"></p>
-    <p>email: <input type="text" placeholder="email" [(ngModel)]="email"></p>
-    <p>motDePasse: <input type="text" placeholder="motDePasse" [(ngModel)]="motDePasse"></p>
+    <p>
+        <label>Login: </label>
+        <input type="text" placeholder="login" [(ngModel)]="login">
+    </p>
+    <p>
+        <label>Email: </label> 
+        <input type="text" placeholder="email" [(ngModel)]="email">
+    </p>
+    <p>
+        <label>MotDePasse: </label>
+        <input type="text" placeholder="motDePasse" [(ngModel)]="motDePasse">
+    </p>
     
     <button type="button" (click)="addStudent()">Enregistrer</button> 
     

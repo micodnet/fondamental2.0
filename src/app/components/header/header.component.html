@@ -1,18 +1,25 @@
 <div class="flex-container">
-    <h2>Moodle 2.0</h2>
-    <h4 class="isConnected" *ngIf="isConnected; else notConnected" >Bienvenue</h4>
+    <h2>Moodle 2.0 => (le fondamental)</h2>
+    <h4 class="isConnected" *ngIf="isConnected; else notConnected" >Bienvenue  😊</h4>
     <ng-template #notConnected >
       <h4 class="notConnected">Déconnecter</h4>
       <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
     </ng-template>
+    <button *ngIf="isConnected" type="button" id="logout" (click)="logout()">Deconection</button>
   </div>
   
  <div class="menu">
      <ul>
+      <li><label id="titreMenu">Menu</label></li>
        <li><button title="auth" type="button" routerLink="authentification">Auth</button></li>
        <li><button title="admin" type="button" routerLink="admin">Admin</button></li>
        <li><button title="modo" type="button" routerLink="modo">Profs</button></li>
-       <li><button title="pages" type="button" routerLink="pages">Cours</button></li>
+       <li><button title="user" type="button" routerLink="user">User</button></li>
+       <li *ngIf="isConnected"><button title="pages" type="button" routerLink="pages">Cours</button></li>
+       <li *ngIf="isConnected"><button title="espace-commun" type="button" routerLink="espace-commun">Esp-com</button></li>
+       <li *ngIf="isConnected"><button title="chat-hub" type="button" routerLink="chat-hub">Message</button></li>
+       <li *ngIf="isConnected"><button title="editor" type="button" routerLink="editor">Editor</button> </li>
+
      </ul>
  </div>
  <hr/>

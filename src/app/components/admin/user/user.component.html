@@ -1,0 +1,56 @@
+<h5 class="titre">DashBoard utilisateur:</h5>
+<menu type="toolbar">
+  <button class="button" (click)="getFormation()">Formations</button>
+  <button class="button" (click)="getCourse()">Cours</button>
+  <button class="button" (click)="getPdf()">Pdf</button>
+</menu>
+<hr/>
+<div class="content"><img src="/assets/salle.png" alt="img"></div>
+<!-- <nu-monaco-editor #a [(ngModel)]="value" [model]="model" (event)="showEvent($event)"></nu-monaco-editor>
+  <button (click)="a.editor.getAction('editor.action.formatDocument').run()">Format document</button>
+    -->
+    <div *ngIf="showFormationsList" class="ma-liste-fo">
+      <button class="button">GetById</button>
+      <button class="button">Update</button>
+      <fieldset><legend>Liste formations</legend>
+          <ul *ngFor="let fo of formations">
+              <li>
+              <p>Id: {{fo.id}}</p>
+              <p>Nom: {{fo.name}}</p>
+              <p>Description: {{fo.description}}</p>
+              <p>Date de début: {{fo.dateDebut}}</p>
+              <p>Durée: {{fo.duree}}</p>
+              <p>Prés-requis: {{fo.preRequis}}</p>
+              </li>
+          </ul>
+      </fieldset>
+  </div>
+  <div *ngIf="showCoursesList" class="ma-liste-co">
+      <button class="button">GetById</button>
+      <button class="button">Update</button>
+      <fieldset><legend>Liste cours</legend>
+          <ul *ngFor="let co of courses">
+              <li>
+              <p>Id: {{co.id}}</p>
+              <p>Titre: {{co.title}}</p>
+              <p>Description: {{co.description}}</p>
+              <p>Id-formation: {{co.formationId}}</p>
+              </li>
+          </ul>
+      </fieldset>
+  </div>
+  <div *ngIf="showPdfList" class="ma-liste-pd">
+      <button class="button">GetById</button>
+      <button class="button">Update</button>
+      <fieldset><legend>Liste pdf</legend>
+          <ul *ngFor="let pd of pdfs">
+              <li>
+              <p>Id: {{pd.id}}</p>
+              <p>Titre: {{pd.title}}</p>
+              <p>Description: {{pd.content}}</p>
+              <p>Id-formation: {{pd.courseId}}</p>
+              </li>
+          </ul>
+      </fieldset>
+  </div>
+

@@ -3,4 +3,5 @@ export interface PdfCours {
     title: string
     content: string
     courseId: number
+    favoriteTVShow?: string[] 
 }

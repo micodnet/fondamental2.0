@@ -28,6 +28,12 @@ export class CoursService {
     return this.client.get<Course[]>(this.url + "course", {headers : myHeader})
   }
 
+  getCourseById(courseId: number): Observable <Course> {
+    const url = `${this.url}/course/getCourseById/${courseId}`;
+    let myHeader : HttpHeaders = new HttpHeaders({"authorization" : "bearer "+ localStorage.getItem("token")})
+    return this.client.get<Course>(this.url + "course", {headers : myHeader})
+  }
+
   addCourse( titre: string, descriptioncours: string, formationId: number) {
     let myHeader: HttpHeaders = new HttpHeaders({"authorization" : "bearer " + localStorage.getItem("token")})
     this.client.post(this.url + "course",{title: titre, description: descriptioncours, formationId: formationId},{headers: myHeader}).subscribe({

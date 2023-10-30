@@ -41,10 +41,9 @@ export class StudentService {
     })
   }
   
-  getStudentByid(studentId: number): Observable<Student>{
-    const url = `${this.url}/student/${studentId}`;
+  getStudentById(studentid: number): Observable<Student>{
     let myHeader : HttpHeaders = new HttpHeaders({"authorization" : "bearer "+ localStorage.getItem("token")})
-    return this.client.get<Student>(this.url + "student",{headers : myHeader})
+    return this.client.get<Student>(this.url + "student/getstudentbyid/" + studentid,{headers : myHeader})
   }
 
   

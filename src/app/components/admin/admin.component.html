@@ -1,20 +1,34 @@
 
 <h5 class="titre">DashBoard admin:</h5>
-<menu type="toolbar">
+
+<!-- <div class="dropdown">
+    <button>Menu</button>
+    <div class="dropdown-content">
     <button class="button" (click)="getUser()">liste de Users</button>
     <button class="button" (click)="getStudent()">liste de Students</button>
     <button class="button" (click)="getFormation()">liste de Formations</button>
     <button class="button" (click)="getCourse()">liste de Cours</button>
     <button class="button" (click)="getPdf()">liste de pdf</button>
+    </div>
+</div> -->
+<menu type="toolbar">
+    <button class="button" (click)="getUser()">Users</button>
+    <button class="button" (click)="getStudent()">Students</button>
+    <button class="button" (click)="getFormation()">Formations</button>
+    <button class="button" (click)="getCourse()">Cours</button>
+    <button class="button" (click)="getPdf()">Pdf</button>
 </menu>
+
 <hr/>
+
 <div class="content"><img src="/assets/ordi.jpg" alt="img"></div>
 <div *ngIf="showUsersList" class="ma-liste-us" class="container">
     <div>
         <button class="button" (click)="navigateToRegisterComponent()">Add</button>
-        <button class="button">GetById</button>
+        <button class="button" (click)="getUserById(userId)">GetUserById</button>
         <button class="button">Update</button>
         <button class="button">Delete</button>
+        <input [(ngModel)]="searchUserId" placeholder="ID de l'utilisateur">
         <fieldset><legend>Liste users</legend>
             <ul *ngFor="let us of users" >
                 <li>
@@ -32,11 +46,29 @@
             </ul>
         </fieldset>
     </div>
-    
+</div>
+<div *ngIf="showUserById" class="mon-user-us" class="container">
+    <div>
+        <button class="button">Update</button>
+        <button class="button">Delete</button>
+        <fieldset><legend>User</legend>
+            <ul>
+                <li>
+                <p>Id: {{us.id}}</p>
+                <p>Nom: {{us.lastName}}</p>
+                <p>Prénom: {{us.firstName}}</p>
+                <p>Date de naissance: {{us.birthDate}}</p>
+                <p>Login: {{us.nickName}}</p>
+                <p>Email: {{us.email}}</p>
+                 </li>
+            </ul>
+        </fieldset>
+    </div>
 </div>
 <div *ngIf="showStudentsList" class="ma-liste-st">
+    <input [(ngModel)]="searchStudentId" placeholder="ID de l'etudient">
     <button class="button" (click)="navigateStudentList()">Add</button>
-    <button class="button">GetById</button>
+    <button class="button" (click)="getStudentById(searchStudentId)">GetById</button>
     <button class="button">Update</button>
     <button class="button">Delete</button>
     <fieldset><legend>Liste students</legend>
@@ -51,9 +83,27 @@
         </ul>
     </fieldset>
 </div>
+<div *ngIf="showStudentById" class="mon-student-st" class="container">
+    <div>
+        <button class="button">Update</button>
+        <button class="button">Delete</button>
+        <fieldset><legend>Student</legend>
+            <ul>
+                <li>
+                    <p>Id: {{st.id}}</p>
+                    <!-- <p>Login: {{st.login}}</p> -->
+                    <p>Email: {{st.email}}</p>
+                    <p>Mot de passe: {{st.psswdHash}}</p>
+                    <!-- <p>Id-utilisateur: {{st.userId}}</p> -->
+                 </li>
+            </ul>
+        </fieldset>
+    </div>
+</div>
 <div *ngIf="showFormationsList" class="ma-liste-fo">
+    <input [(ngModel)]="searchFormationId" placeholder="ID de la formation">
     <button class="button" (click)="navigateFormation()">Add</button>
-    <button class="button">GetById</button>
+    <button class="button" (click)="getFormationById(searchFormationId)">GetById</button>
     <button class="button">Update</button>
     <button class="button">Delete</button>
     <fieldset><legend>Liste formations</legend>
@@ -69,9 +119,27 @@
         </ul>
     </fieldset>
 </div>
+<div *ngIf="showFormationById" class="ma formation-fo">
+    <button class="button">Update</button>
+    <button class="button">Delete</button>
+    <fieldset><legend>Formations</legend>
+        <ng-template #loading>Loading...</ng-template>
+        <ul *ngIf="formation$ | async as fo; else loading" >
+            <li>
+            <p>Id: {{fo.id}}</p>
+            <p>Nom: {{fo.name}}</p>
+            <p>Description: {{fo.description}}</p>
+            <p>Date de début: {{fo.dateDebut}}</p>
+            <p>Durée: {{fo.duree}}</p>
+            <p>Prés-requis: {{fo.preRequis}}</p>
+            </li>
+        </ul>
+    </fieldset>
+</div>
 <div *ngIf="showCoursesList" class="ma-liste-co">
+    <input [(ngModel)]="searchCourseId" placeholder="ID du cours">
     <button class="button" (click)="navigateCours()">Add</button>
-    <button class="button">GetById</button>
+    <button class="button" (click)="getCourseById(searchCourseId)">GetById</button>
     <button class="button">Update</button>
     <button class="button">Delete</button>
     <fieldset><legend>Liste cours</legend>
@@ -85,18 +153,49 @@
         </ul>
     </fieldset>
 </div>
+<div *ngIf="showCourseById" class="mon-cours-co">
+    <button class="button">Update</button>
+    <button class="button">Delete</button>
+    <fieldset><legend>Cours</legend>
+        <ng-template #loading>Loading...</ng-template>
+          <ul *ngIf="course$ | async as co; else loading" >
+            <li>
+            <p>Id: {{co.id}}</p>
+            <p>Titre: {{co.title}}</p>
+            <p>Description: {{co.description}}</p>
+            <p>Id-formation: {{co.formationId}}</p>
+            </li>
+        </ul>
+    </fieldset>
+</div>
 <div *ngIf="showPdfList" class="ma-liste-pd">
+    <input [(ngModel)]="searchPdfId" placeholder="ID du pdf">
     <button class="button" (click)="navigatePdf()">Add</button>
-    <button class="button">GetById</button>
+    <button class="button" (click)="getPdfById(searchPdfId)">GetById</button>
     <button class="button">Update</button>
     <button class="button">Delete</button>
     <fieldset><legend>Liste pdf</legend>
-        <ul *ngFor="let pd of pdfs">
+        <ng-template #loading>Loading...</ng-template>
+        <ul *ngIf="pdfCourse$ | async as pf; else loading" >
             <li>
-            <p>Id: {{pd.id}}</p>
-            <p>Titre: {{pd.title}}</p>
-            <p>Description: {{pd.content}}</p>
-            <p>Id-formation: {{pd.courseId}}</p>
+            <p>Id: {{pf.id}}</p>
+            <p>Titre: {{pf.title}}</p>
+            <p>Description: {{pf.content}}</p>
+            <p>Id-formation: {{pf.courseId}}</p>
+            </li>
+        </ul>
+    </fieldset>
+</div>
+<div *ngIf="showPdfCouseById" class="mon-pdf-pd">
+    <button class="button">Update</button>
+    <button class="button">Delete</button>
+    <fieldset><legend>Pdf</legend>
+        <ul *ngFor="let pf of pdfs">
+            <li>
+            <p>Id: {{pf.id}}</p>
+            <p>Titre: {{pf.title}}</p>
+            <p>Description: {{pf.content}}</p>
+            <p>Id-formation: {{pf.courseId}}</p>
             </li>
         </ul>
     </fieldset>

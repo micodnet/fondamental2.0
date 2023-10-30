@@ -1,6 +1,6 @@
  import { HttpClient, HttpHeaders } from '@angular/common/http';
  import { Injectable } from '@angular/core';
- import { Observable } from 'rxjs';
+ import { Observable, Subject } from 'rxjs';
 
  import jwt_decode from 'jwt-decode';
 
@@ -8,6 +8,16 @@
    providedIn: 'root'
  })
  export class AuthService {
+
+  get isConnected() : boolean {
+    return localStorage.getItem('token') ? true : false
+  }
+
+  connectionSubject : Subject<boolean> = new Subject<boolean>()
+
+  emitConnectionStatus() {
+    this.connectionSubject.next(this.isConnected)
+  }
 
    private url : string = "https://localhost:7135/api/"
    constructor(
@@ -21,8 +31,8 @@
        return jwt["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]
      }
 
-  login(email :string, password : string) {
-     this.client.post(this.url + "user/login", {email, password}, {responseType : 'text'}).subscribe({
+  login(email :string, pwd : string) {
+     this.client.post(this.url + "user/login", {email, pwd}, {responseType : 'text'}).subscribe({
        next : (token : string) => {
          localStorage.setItem("token", token)
        }
@@ -36,8 +46,12 @@
  }
 
  export interface User {
-   id : number
-   nickname : string
-   email : string
-   roleId : number
+  id : number
+  lastName : string
+  firstName : string
+  birthDate : Date
+  nickName : string
+  email : string
+  psswdHash : string
+  roleId : number
  }

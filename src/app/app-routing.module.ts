@@ -32,16 +32,27 @@ import { FormationComponent } from './components/pages/formation/formation.compo
 import { CoursComponent } from './components/pages/formation/cours/cours.component';
 import { PdfComponent } from './components/pages/formation/pdf/pdf.component';
 import { ModoComponent } from './components/admin/modo/modo.component';
+import { UserComponent } from './components/admin/user/user.component';
+import { EspaceCommunComponent } from './components/admin/espace-commun/espace-commun.component';
+import { ChatHubComponent } from './components/chat-hub/chat-hub.component';
+import { EditorhtmlComponent } from './components/pages/cours/html-css/editeurhtml/editorhtml.component';
+import { EditorComponent } from './components/shared/editor/editor.component';
+
+
 
 const routes: Routes = [
   {path : '', redirectTo : 'login', pathMatch : 'full'},
   {path: 'admin', component: AdminComponent},
   {path: 'modo', component: ModoComponent},
+  {path: 'user', component: UserComponent},
+  {path: 'espace-commun', component: EspaceCommunComponent},
+  {path: 'chat-hub', component: ChatHubComponent},
   {path : 'userlist',canActivate : [authGuard] , resolve : {maliste : listResolver}, component : UserListComponent},
   {path : 'studentlist', component: StudentListComponent},
   {path : 'formation', component: FormationComponent},
   {path : 'cours', component: CoursComponent},
   {path : 'pdf', component: PdfComponent},
+  {path : 'editor', component: EditorComponent},
   {path: 'authentification', component: AuthentificationComponent, children:[
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent}, 
@@ -59,7 +70,9 @@ const routes: Routes = [
     {path: 'asp-mvc', component: AspMvcComponent},
     {path: 'blazor', component: BlazorComponent},
     {path: 'java-scrypt', component: JavaScryptComponent},
-    {path: 'html-css', component: HtmlCssComponent},
+    {path: 'html-css', component: HtmlCssComponent, children:[
+      {path: 'editorhtml', component: EditorhtmlComponent},]},
+    
     {path: 'git', component: GitComponent},
     {path: 'cyber-secu', component: CyberSecuComponent},
     {path: 'azure-deploy', component: AzureDeployComponent},

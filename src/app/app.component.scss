@@ -1,3 +1,7 @@
+// *{
+//   font-family: Comic Sans ms;
+// }
+
 .content {
     margin-right: 20px;
     margin-left: 120px; /* Ajoute une marge équivalente à la largeur du menu à gauche */
@@ -13,17 +17,31 @@
   }
 
   #banniere  {
-    width: 100%; /* Largeur de la bannière */
+    margin-left: 120px;
+    width: 80%; /* Largeur de la bannière */
     height: 230px; /* Hauteur de la bannière */
     background-size: 100% 100%; /* Étirer l'image pour qu'elle s'adapte à la largeur et à la hauteur */
-    .translate {
-      transition: translate 1s;
-    }
+    // .translate {
+    //   transition: translate 1s;
+    // }
     
     div:hover .content {
       transition:translate 200px 50px;
     }
 }
+
+// .nav {
+//   margin-left: 10px;
+//   max-width: 250px;
+//   min-width: 200px;
+//   background-color: palevioletred;
+
+//}
+// .main {
+//      display: flex;
+//    flex-direction: row;
+//  }
+
 
   button {
     align-items: center;
@@ -37,3 +55,9 @@
     font-size: small;
   }
   
+  #mode {
+    position: absolute;
+  }
+  
+
+ 

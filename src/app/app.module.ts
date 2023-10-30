@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -40,9 +40,20 @@ import { ErreurComponent } from './components/shared/erreur/erreur.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import { CoursComponent } from './components/pages/formation/cours/cours.component';
 import { ModoComponent } from './components/admin/modo/modo.component';
-//import {HTTP_INTERCEPTORS } from '@angular/common/http';
+import { EspaceCommunComponent } from './components/admin/espace-commun/espace-commun.component';
+import { UserComponent } from './components/admin/user/user.component';
+import { EditorComponent } from './components/shared/editor/editor.component';
+import { EditorhtmlComponent } from './components/pages/cours/html-css/editeurhtml/editorhtml.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+//import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 //import { TokenInterceptor } from 'src/app/components/shared/services/token.interceptor';
-//import { listResolver } from 'src/app/components/shared/services/list.resolver';
+import { listResolver } from 'src/app/components/shared/services/list.resolver';
+import { AddComponent } from './components/crud/add/add.component';
+import { GetComponent } from './components/crud/get/get.component';
+import { DeleteComponent } from './components/crud/delete/delete.component';
+import { DetailsComponent } from './components/crud/details/details.component';
+import { UpdateComponent } from './components/crud/update/update.component';
+import { NavComponent } from './components/template/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -81,15 +92,28 @@ import { ModoComponent } from './components/admin/modo/modo.component';
     CoursComponent,
     ErreurComponent,
     ModoComponent,
+    EspaceCommunComponent,
+    UserComponent,
+    EditorComponent,
+    EditorhtmlComponent,
+    AddComponent,
+    GetComponent,
+    DeleteComponent,
+    DetailsComponent,
+    UpdateComponent,
+    NavComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
-    
-  ],
+    FormsModule,
+    ReactiveFormsModule,
+    AngularEditorModule,
+    //CKEditorModule,
+
+ ],
 providers: [/*{provide : HTTP_INTERCEPTORS, useClass : TokenInterceptor, multi : true}*/],
   bootstrap: [AppComponent]
 })

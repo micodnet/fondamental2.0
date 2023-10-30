@@ -1,0 +1,53 @@
+// ul {
+//     list-style-type: none;
+//     padding: 0;
+//   }
+//   a{
+//     text-decoration: none;
+//   }
+//   a:hover{
+//     color:black;
+  
+//   }
+
+//   button {
+//     align-items: center;
+//     border-radius: 5px; 
+//     background-color: lemonchiffon; 
+//     color: #b01010; 
+//     padding: 1px 3px; 
+//     //border: none; 
+//     cursor:pointer; 
+//     border-color: lightblue;
+//     font-size: small;
+//   }
+
+//   #titreMenu {font-size: x-large;}
+
+//   .menu {
+    
+//     position: fixed; /* Fixe le menu */
+//     left: 0; /* Place le menu à gauche de la fenêtre du navigateur */
+//     top: 0; /* Place le menu en haut de la fenêtre du navigateur */
+//     width: 100px; /* Largeur du menu */
+//     height: 100%; /* Hauteur du menu (100% de la fenêtre) */
+//     background-color:rgb(146, 54, 54); /* Couleur de fond du menu */
+//     color: #251b1b; /* Couleur du texte du menu */
+//     padding: 20px; /* Espace intérieur du menu */
+//     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); /* Ombre pour ajouter une séparation */
+//   }
+  
+//   .menu ul {
+//     list-style-type: none; /* Supprime les puces de liste */
+//     padding: 0;
+//   }
+  
+//   .menu ul li {
+//     margin-bottom: 10px; /* Marge entre les éléments de la liste */
+//   }
+  
+//   .menu a {
+//     text-decoration: none; /* Supprime les soulignements des liens */
+//     color: #fff; /* Couleur du texte des liens */
+//     display: block; /* Affiche les liens comme des blocs pour occuper toute la largeur */
+//   }

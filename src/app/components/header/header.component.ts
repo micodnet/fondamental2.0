@@ -18,4 +18,8 @@ export class HeaderComponent {
     })
     this.userService.emitConnectionStatus()
   }
+
+  logout(){
+    this.userService.logout()
+  }
 }

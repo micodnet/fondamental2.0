@@ -1,0 +1,36 @@
+<p>add works!</p>
+<h3>Formulaire</h3>
+
+<!-- <fieldset>
+  <form [formGroup]="myForm" (ngSubmit)="validerFormulaire()">
+    <p><label>Titre</label>
+       <input type="text" formControlName="titre">
+    </p>
+    <p *ngIf="myForm.controls['titre'].invalid" class="red-text">
+      Titre est obligatoire
+    </p>
+    <p><label>Année de sortie</label>
+      <input type="number" formControlName="anneeSortie">
+    </p>
+    <p *ngIf="myForm.controls['anneeSortie'].invalid && myForm.controls['anneeSortie'].touched" class="red-text">
+      Année doit être supérieur à 1960
+    </p>
+    <p><label>Genre</label>
+      <input type="text" formControlName="genre">
+    </p>
+    <p class="red-text" *ngIf="myForm.controls['genre'].errors && myForm.controls['genre'].touched">
+            {{myForm.controls['genre'].errors['myError']}}
+    </p>
+    <div>
+      <button type="button" (click)="ajouterPersonne()">+ Acteur</button>
+      <ul formArrayName="casting">
+        <li *ngFor="let a of getPersonne().controls; let i = index;">
+          Acteur {{i}} : <input type="text" [formControlName]="i">
+
+        </li>
+      </ul>
+    </div>
+    <button class="btn" type="submit" [disabled]="myForm.invalid">Valider</button>
+    <button class="btn" type="reset">Vider</button>
+  </form>
+</fieldset> -->

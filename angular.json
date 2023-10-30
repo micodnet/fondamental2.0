@@ -32,9 +32,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-              "src/script.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -93,13 +91,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+
             ],
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-              "src/script.js"
-            ]
+            "scripts": []
           }
         }
       }

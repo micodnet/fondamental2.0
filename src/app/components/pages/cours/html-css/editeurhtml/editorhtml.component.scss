@@ -1,0 +1,31 @@
+.html {
+    border: 1px solid #ccc; /* Bordure */
+  padding: 10px; /* Marge intérieure */
+  background-color: #f8f8f8; /* Couleur de fond */
+}
+
+h5 {
+    font-size: 1.5rem; /* Taille de la police du titre */
+    margin-top: 20px; /* Marge supérieure pour séparer du contenu précédent */
+  }
+
+  .angular-editor-toolbar {
+    background-color: #f0f0f0; /* Couleur de fond de la barre d'outils */
+    border: 1px solid #ccc; /* Bordure de la barre d'outils */
+    padding: 10px; /* Marge intérieure de la barre d'outils */
+  }
+  
+  /* Style pour les boutons de la barre d'outils */
+  .angular-editor-button {
+    background-color: #007bff; /* Couleur de fond des boutons */
+    color: #fff; /* Couleur du texte des boutons */
+    border: none; /* Supprimer la bordure des boutons */
+    padding: 5px 10px; /* Marge intérieure des boutons */
+    margin: 5px; /* Marge entre les boutons */
+    cursor: pointer; /* Curseur de la souris en main */
+  }
+  
+  /* Style pour les boutons de la barre d'outils au survol (facultatif) */
+  .angular-editor-button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+  }
